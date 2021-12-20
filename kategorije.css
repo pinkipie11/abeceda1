@@ -33,210 +33,290 @@ body {
 }
 
 
-/* Navbar section */
+/* navbar */
 
-.nav {
-    position: relative;
-    width: 100%;
-    height: 65px;
-    position: fixed;
-    line-height: 65px;
-    text-align: center;
-    background-color: #fff;
-    z-index: 999999999999;
-    border-bottom: 1px solid grey;
+html,
+body {
+    min-height: 100%;
+    min-width: auto;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.nav div .logo {
-    display: inline-block;
-    position: relative;
-    text-align: left;
-    margin-left: -300px;
-}
-
-.nav div .logo a img {
-    width: 220px;
-    height: 35px;
-    margin-top: 8px;
-}
-
-.nav div.logo a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.8em;
-    text-transform: uppercase;
-}
-
-.nav div.logo a:hover {
-    color: rgb(255, 72, 0);
-}
-
-.nav div.main_list {
-    width: 700px;
-    height: 65px;
-    float: right;
-}
-
-.nav div.main_list ul {
-    width: 100%;
-    height: 65px;
-    display: flex;
-    list-style: none;
+header .navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-align: center;
-    color: #000000;
+    position: fixed;
+    height: 90px;
+    min-height: 90px;
+    min-width: 100%;
+    z-index: 9999999999999999999999999999999999999999;
+    background: #ffffff;
 }
 
-.nav div.main_list ul li {
-    width: 10%;
-    height: 65px;
-    padding-right: 10px;
-    margin-right: 10px;
+header .navigation .logo {
+    margin-left: 220px;
+    margin-bottom: 0px;
+    margin-top: -190px;
+}
+
+header .navigation .logo img {
+    width: 260px;
+    height: 35px;
+}
+
+header .navigation .menu-list2 {
+    list-style: none;
+    align-items: center;
+    width: 1400px;
+    margin-right: -700px;
+}
+
+header .navigation .humbarger2 {
+    margin-right: 20px;
+    display: none;
+}
+
+header .navigation .humbarger2 .bar {
+    width: 30px;
+    height: 2px;
+    margin: 7px;
+    background: #000;
+}
+
+header .navigation .menu-list2 li {
     display: inline-block;
+    width: auto;
+    margin-right: 20px;
+    margin-top: 16px;
 }
 
-.nav div.main_list ul li a {
-    text-decoration: none;
-    color: #000000;
-    line-height: 65px;
+header .navigation .menu-list2 li a {
+    width: auto;
+    padding: 0px;
+    color: #000;
+    display: inline-block;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    white-space: nowrap;
-    font-size: 12px;
-    display: inline-block;
-}
-
-.nav div.main_list ul li a:hover {
-    color: rgb(255, 72, 0);
-}
-
-.nav div.media_button {
-    width: 40px;
-    height: 40px;
-    background-color: transparent;
-    position: absolute;
-    right: 15px;
-    top: 12px;
-    display: none;
-}
-
-.nav div.media_button button.main_media_button {
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    outline: 0;
-    border: none;
     cursor: pointer;
+    transition: color 0.5s ease, border 0.5 ease;
+    text-decoration: none;
 }
 
-.nav div.media_button button.main_media_button span {
-    width: 98%;
-    height: 1px;
-    display: block;
-    background-color: #08080863;
-    margin-top: 9px;
-    margin-bottom: 10px;
-}
-
-.nav div.media_button button.main_media_button:hover span:nth-of-type(1) {
-    transform: rotateY(180deg);
-    transition: all 0.5s;
-    background-color: #c0c0c0;
-}
-
-.nav div.media_button button.main_media_button:hover span:nth-of-type(2) {
-    transform: rotateY(180deg);
-    transition: all 0.4s;
-    background-color: #c0c0c0;
-}
-
-.nav div.media_button button.main_media_button:hover span:nth-of-type(3) {
-    transform: rotateY(180deg);
-    transition: all 0.3s;
-    background-color: #c0c0c0;
-}
-
-.nav div.media_button button.active span:nth-of-type(1) {
-    transform: rotate3d(0, 0, 1, 45deg);
-    position: absolute;
-    margin: 0;
-}
-
-.nav div.media_button button.active span:nth-of-type(2) {
-    display: none;
-}
-
-.nav div.media_button button.active span:nth-of-type(3) {
-    transform: rotate3d(0, 0, 1, -45deg);
-    position: absolute;
-    margin: 0;
-}
-
-.nav div.media_button button.active:hover span:nth-of-type(1) {
-    transform: rotate3d(0, 0, 1, 20deg);
-}
-
-.nav div.media_button button.active:hover span:nth-of-type(3) {
-    transform: rotate3d(0, 0, 1, -20deg);
+header .navigation .menu-list2 li a:hover {
+    color: rgba(255, 72, 0);
 }
 
 
-/* Home section */
+/* Responsive Section */
 
-.home {
-    width: 100%;
-    height: 100vh;
-    background-color: #ddd;
-}
-
-
-/* Medai qurey section */
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    .container {
-        margin: 0;
+@media only screen and (max-width: 1130px) {
+    header .navigation {
+        min-height: 80px;
+        width: 40%;
     }
-}
-
-@media screen and (max-width: 768px) {
-    .container {
-        margin: 0;
-    }
-    .nav div.logo {
-        margin-left: 15px;
-    }
-    .nav div.main_list {
+    header .navigation .menu-list2 {
+        position: absolute;
+        top: 12vh;
         width: 100%;
-        margin-top: 65px;
-        height: 0px;
-        overflow: hidden;
-    }
-    .nav div.show_list {
-        height: 200px;
-    }
-    .nav div.main_list ul {
-        flex-direction: column;
-        width: 100%;
-        height: 200px;
-        top: 80px;
-        right: 0;
-        left: 0;
-    }
-    .nav div.main_list ul li {
-        width: 100%;
-        height: 40px;
-        background-color: rgba(0, 0, 255, 0.8);
-    }
-    .nav div.main_list ul li a {
+        background: rgba(255, 255, 255, 0.99);
         text-align: center;
-        line-height: 40px;
-        width: 100%;
-        height: 40px;
-        display: table;
+        display: none;
     }
-    .nav div.media_button {
+    header .navigation .menu-list2 li {
         display: block;
+    }
+    header .navigation .menu-list2 li a {
+        display: block;
+        padding: 20px;
+        transition: color 1s ease, padding 1s ease, background-color 1s ease;
+    }
+    header .navigation .menu-list2 li a:hover {
+        color: #000;
+        padding-left: 30px;
+        background-color: rgba(255, 72, 0);
+    }
+    header .navigation .humbarger2 {
+        display: block;
+    }
+}
+
+
+/* Tablet desktop :768px. */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    header .navigation .menu-list2 {
+        position: absolute;
+        top: 12vh;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.99);
+        text-align: center;
+        padding-top: -20px;
+    }
+    header .navigation .menu-list2 li {
+        display: block;
+    }
+    header .navigation .menu-list2 li a {
+        display: block;
+        padding: 20px;
+        transition: color 1s ease, padding 1s ease, background-color 1s ease;
+    }
+    header .navigation .menu-list2 li a:hover {
+        color: #000;
+        padding-left: 30px;
+        background-color: rgba(255, 72, 0);
+    }
+}
+
+
+/* Large Mobile :480px. */
+
+@media only screen and (max-width: 767px) {
+    header .navigation .logo {
+        margin-left: 220px;
+        margin-bottom: 0px;
+        margin-top: -192px;
+    }
+    header .navigation .menu-list2 {
+        position: absolute;
+        top: 12vh;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.99);
+        text-align: center;
+        display: none;
+    }
+    header .navigation .menu-list2 li {
+        display: block;
+    }
+    header .navigation .menu-list2 li a {
+        display: block;
+        padding: 20px;
+        transition: color 1s ease, padding 1s ease, background-color 1s ease;
+    }
+    header .navigation .menu-list2 li a:hover {
+        color: #000;
+        padding-left: 30px;
+        background-color: rgba(255, 72, 0);
+    }
+    header .navigation .humbarger2 {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    header .navigation .logo {
+        margin-left: 200px;
+        margin-bottom: 0px;
+        margin-top: -132px;
+    }
+}
+
+
+/* small mobile :320px. */
+
+@media only screen and (max-width: 479px) {
+    header .navigation .menu-list2 {
+        position: absolute;
+        top: 12vh;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.99);
+        text-align: center;
+        display: none;
+    }
+    header .navigation .menu-list2 li {
+        display: block;
+    }
+    header .navigation .menu-list2 li a {
+        display: block;
+        padding: 20px;
+        transition: color 1s ease, padding 1s ease, background-color 1s ease;
+    }
+    header .navigation .menu-list2 li a:hover {
+        color: #000;
+        padding-left: 30px;
+        background-color: rgba(255, 72, 0);
+    }
+    header .navigation .logo {
+        margin-left: 170px;
+        margin-bottom: 0px;
+        margin-top: -129px;
+    }
+    header .navigation .logo img {
+        width: 240px;
+        height: 32px;
+    }
+    header .navigation .humbarger2 {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    header .navigation .logo {
+        margin-left: 165px;
+        margin-bottom: 0px;
+        margin-top: -130px;
+    }
+}
+
+@media only screen and (max-width: 391px) {
+    header .navigation .logo {
+        margin-left: 140px;
+        margin-bottom: 0px;
+        margin-top: -130px;
+    }
+    header .navigation .logo img {
+        width: 210px;
+        height: 32px;
+    }
+}
+
+@media only screen and (max-width: 355px) {
+    header .navigation .logo {
+        margin-left: 130px;
+        margin-bottom: 0px;
+        margin-top: -130px;
+    }
+    header .navigation .logo img {
+        width: 220px;
+        height: 32px;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    header .navigation .logo {
+        margin-left: 140px;
+        margin-bottom: 0px;
+        margin-top: -130px;
+    }
+    header .navigation .logo img {
+        width: 210px;
+        height: 31px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    header .navigation .logo {
+        margin-left: 130px;
+        margin-bottom: 0px;
+        margin-top: -130px;
+    }
+    header .navigation .logo img {
+        width: 210px;
+        height: 31px;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    header .navigation .logo {
+        margin-left: 120px;
+        margin-bottom: 0px;
+        margin-top: -130px;
+    }
+    header .navigation .logo img {
+        width: 210px;
+        height: 31px;
     }
 }
 
